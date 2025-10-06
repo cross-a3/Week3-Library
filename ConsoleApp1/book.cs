@@ -13,6 +13,14 @@ namespace ConsoleApp1
         public String Author;
         public String ISBN;
 
+       // Example of a constructor that allows us to "construct" a new Book object
+        public Book(string bookTitle, string bookAuthor, string bookISBN)
+        { 
+            Title = bookTitle;
+            Author = bookAuthor;
+            ISBN = bookISBN;
+        }
+
         void DisplayInfo()
         {
             Console.WriteLine($"Book Title: {Title}");
@@ -23,26 +31,12 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-            // Create a new instance (object) of the Book class)
-            // Note how thw object name differs from the class name
-            Book myBook = new Book();
+            
+            // Create new instance (object) of the book class
+            Book book3 = new Book("Harry Potter", "JK Rowing", "18273645");
 
-            // This information is for one of the books in our library  
-            myBook.Title = "C# for beginners";
-            myBook.Author = "Bill Gates";
-            myBook.ISBN = "212345678";
-
-            // Create another book
-            Book book2 = new Book();
-
-            book2.Title = "C# Methods";
-            book2.Author = "Microsoft";
-            book2.ISBN = "87654321";
-
-
-
-            myBook.DisplayInfo();
-            book2.DisplayInfo();
+            
+            book3.DisplayInfo();
 
         }
     }
