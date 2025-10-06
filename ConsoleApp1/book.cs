@@ -6,19 +6,40 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class Book
+     class Book
     {
 
-        public string Title;
-        public String Author;
-        public String ISBN;
+        private string Title;
+        private String Author;
+        private String ISBN;
 
-       // Example of a constructor that allows us to "construct" a new Book object
+        // Title property to allow access to the title private variable
+        public string Title
+        {
+            get { return Title; } // Get method
+            set { Title = value; } // Set method
+        }
+
+        // Author property to allow access to the Author private variable
+        public string Author
+        {
+            get { return Author; } // Get method
+            set { Author = value; } // Set method
+        }
+
+        // ISBN property to allow access to the ISBN private variable
+        public string ISBN
+        {
+            get { return ISBN; } // Get method
+            set { ISBN = value; } // Set method
+        }
+
+        // Example of a constructor that allows us to "construct" a new Book object
         public Book(string bookTitle, string bookAuthor, string bookISBN)
         { 
-            Title = bookTitle;
-            Author = bookAuthor;
-            ISBN = bookISBN;
+            this.Title = bookTitle;
+            this.Author = bookAuthor;
+            this.ISBN = bookISBN;
         }
 
         public void DisplayInfo()
