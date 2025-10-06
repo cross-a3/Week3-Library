@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Book
+    public class Book
     {
 
         public string Title;
@@ -21,7 +21,7 @@ namespace ConsoleApp1
             ISBN = bookISBN;
         }
 
-        void DisplayInfo()
+        public void DisplayInfo()
         {
             Console.WriteLine($"Book Title: {Title}");
             Console.WriteLine($"Book Author: {Author}");
@@ -29,18 +29,11 @@ namespace ConsoleApp1
             Console.WriteLine();
         }
 
-        static void Main(string[] args)
-        {
-            
-            // Create new instance (object) of the book class
-            Book book3 = new Book("Harry Potter", "JK Rowing", "18273645");
-
-            
-            book3.DisplayInfo();
+        
 
         }
     }
-}
+
 
 
     
